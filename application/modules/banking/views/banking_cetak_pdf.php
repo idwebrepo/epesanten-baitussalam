@@ -151,7 +151,7 @@
 
 	<table style="border-style: solid;">
 		<tr>
-			<th style="border-top: 1px solid; border-bottom: 1px solid;">No.</th>
+			<th style="padding-left:5px;border-top: 1px solid; border-bottom: 1px solid;">No.</th>
 			<th style="border-top: 1px solid; border-bottom: 1px solid;">Kode</th>
 			<th style="border-top: 1px solid; border-bottom: 1px solid;">Catatan</th>
 			<th colspan="2" style="border-top: 1px solid; border-bottom: 1px solid;" align="center">Debit</th>
@@ -162,13 +162,13 @@
 		foreach ($trx as $row) :
 		?>
 			<tr>
-				<td style="border-bottom: 1px solid;padding-top: 10px; padding-bottom: 10px;"><?php echo $i ?></td>
+				<td style="padding-left:5px;border-bottom: 1px solid;padding-top: 10px; padding-bottom: 10px;"><?php echo $i ?></td>
 				<td style="border-bottom: 1px solid;"><?php echo ($row['banking_code'] == '1') ? 'DEB' : 'KRD' ?></td>
 				<td style="border-bottom: 1px solid"><?php echo $row['banking_note'] ?></td>
 				<td style="border-bottom: 1px solid;">Rp. </td>
 				<td style="border-bottom: 1px solid; text-align: right;"><?php echo number_format($row['banking_debit'], 0, ',', '.') ?></td>
 				<td style="border-bottom: 1px solid;">Rp. </td>
-				<td style="border-bottom: 1px solid; text-align: right;"><?php echo number_format($row['banking_kredit'], 0, ',', '.') ?></td>
+				<td style="padding-right:5px;border-bottom: 1px solid; text-align: right;"><?php echo number_format($row['banking_kredit'], 0, ',', '.') ?></td>
 			</tr>
 		<?php
 			$i++;
@@ -179,7 +179,7 @@
 			<td style="background-color: #dedede;font-weight:bold;border-bottom: 1px solid;">Rp. </td>
 			<td style="background-color: #dedede; font-weight:bold;border-bottom: 1px solid; text-align: right;"><?php echo number_format($sumDebit, 0, ',', '.') ?></td>
 			<td style="background-color: #dedede;font-weight:bold;border-bottom: 1px solid;">Rp. </td>
-			<td style="background-color: #dedede; font-weight:bold;border-bottom: 1px solid; text-align: right;"><?php echo number_format($sumKredit, 0, ',', '.') ?></td>
+			<td style="padding-right:5px;background-color: #dedede; font-weight:bold;border-bottom: 1px solid; text-align: right;"><?php echo number_format($sumKredit, 0, ',', '.') ?></td>
 		</tr>
 		<tr>
 			<td colspan="2" style="text-align: center;padding-top: 5px; padding-bottom: 5px;"><?php echo $setting_city['setting_value'] ?>, <?php echo pretty_date(date('Y-m-d'), 'd F Y', false) ?></td>
@@ -189,7 +189,7 @@
 			<td style="background-color: #dedede; font-weight:bold;border-bottom: 1px solid; text-align: left;">
 				Rp.
 			</td>
-			<td style="background-color: #dedede; font-weight:bold;border-bottom: 1px solid; text-align: right;">
+			<td style="padding-right:5px;background-color: #dedede; font-weight:bold;border-bottom: 1px solid; text-align: right;">
 				<?php echo number_format($saldo, 0, ',', '.') ?>
 			</td>
 		</tr>
