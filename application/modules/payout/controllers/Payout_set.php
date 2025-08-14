@@ -352,6 +352,7 @@ class Payout_set extends CI_Controller
     $data['setting_district'] = $this->Setting_model->get(array('id' => SCHOOL_DISTRICT));
     $data['setting_school'] = $this->Setting_model->get(array('id' => SCHOOL_NAME));
     $data['setting_address'] = $this->Setting_model->get(array('id' => SCHOOL_ADRESS));
+    $data['setting_email'] = $this->Setting_model->get(array('id' => 90));
     $data['setting_phone'] = $this->Setting_model->get(array('id' => SCHOOL_PHONE));
     $tanggal = date_create($f['d']);
     $dformat = date_format($tanggal, 'dmYHis');
