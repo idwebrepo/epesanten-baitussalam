@@ -113,27 +113,16 @@
 </style>
 
 <body>
-	<?php
-	$arrContextOptions = array(
-		"ssl" => array(
-			"verify_peer" => false,
-			"verify_peer_name" => false,
-		),
-	);
-
-	$path = base_url('uploads/school/kop_thermal.png');
-	$type = pathinfo($path, PATHINFO_EXTENSION);
-	$data = file_get_contents($path, false, stream_context_create($arrContextOptions));
-	$base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
-	?>
-	<img src="<?php echo $base64 ?>" style="width: 100%;">
 	<table>
 		<tr>
-			<td align="center">
-				<p class="alamat"><?php echo $setting_address['setting_value'] ?><?php echo ' Telp. ' . $setting_phone['setting_value'] ?></p>
+			<td>
+				<p class="name-school"><?php echo $setting_school['setting_value'] ?></p>
+				<p class="alamat"><?php echo $setting_address['setting_value'] ?></p>
+				<p class="alamat"><?php echo ' Telp. ' . $setting_phone['setting_value'] ?></p>
 			</td>
 		</tr>
 	</table>
+	<hr>
 	<table style="padding-top: 0px; padding-bottom: 0px">
 		<tr>
 			<td>
