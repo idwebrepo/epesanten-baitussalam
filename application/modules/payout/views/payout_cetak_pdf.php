@@ -127,8 +127,8 @@
 	</div>
 	<table>
 		<tr>
-			<td width="6%">
-				<img src="<?php echo base_url() . 'uploads/school/' . logo() ?>" style="height: 70px;">
+			<td width="12%">
+				<img src="<?php echo base_url() . 'uploads/school/' . logo() ?>" style="height: 85px;">
 			</td>
 			<td>
 				<span class="name-school"><?php echo $setting_school['setting_value'] ?></span>
@@ -149,12 +149,13 @@
 						}
 						$ji++;
 					}
-					echo '</span>';
+					echo '  Baitussalam</span>';
 				} ?>
 				<br>
 				<span class="alamat">
 					<?php echo $setting_address['setting_value'] ?> <br>
-					<?php echo 'Email : ' . $setting_email['setting_value'] ?> (<?php echo $setting_phone['setting_value'] ?>)
+					<?php echo $setting_district['setting_value'] . ' ' . $setting_city['setting_value'] ?><br>
+					<?php echo 'Email : <u style="color:blue;">' . $setting_email['setting_value'] ?></u> (<?php echo $setting_phone['setting_value'] ?>)
 				</span>
 				<br>
 				<br>
