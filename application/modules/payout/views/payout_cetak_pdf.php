@@ -89,7 +89,7 @@
 		right: 0;
 		font-size: 18px;
 		border-width: thin;
-		padding: 5px;
+		/* padding: 5px; */
 	}
 
 	.topright2 {
